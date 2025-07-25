@@ -1,15 +1,476 @@
 <!doctype html>
 <html>
 <head>
+  <title>JJK High School</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="dist/style.css" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configure Tailwind to include Times New Roman -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            times: ['"Times New Roman"', 'Times', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fallback font -->
+  <style>
+    .font-times {
+      font-family: 'Times New Roman', Times, serif;
+    }
+  </style>
 </head>
 <body>
-  <div class="my-2 p-6 bg-blue-400">
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  </div>
+  <!-- Navbar -->
+  <header class="bg-blue-600 text-white shadow-md relative z-50">
+    <div class="container mx-auto flex items-center justify-between px-4 py-4">
+      <div class="text-2xl font-bold font-times">JJK High School</div>
+      <nav class="space-x-6">
+        <a href="#home" class="hover:text-gray-200 text-lg">Home</a>
+        <a href="#about" class="hover:text-gray-200 text-lg">About</a>
+        <a href="#admissions" class="hover:text-gray-200 text-lg">Admissions</a>
+        <a href="#contact" class="hover:text-gray-200 text-lg">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center -mt-20 pt-20 h-screen text-white" style="background-image: url('https://images.unsplash.com/photo-1549861833-c5932fd19229?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;">
+    <!-- Fallback background color -->
+    <div class="absolute inset-0 bg-blue-900"></div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 font-times">Welcome to JJK High School</h1>
+      <p class="text-lg md:text-xl max-w-2xl mb-6">
+        Empowering the next generation with knowledge, values, and a passion for excellence.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg rounded-lg font-semibold transition duration-300">
+          Learn More
+        </a>
+        <a href="#contact" class="bg-transparent border border-white hover:bg-white hover:text-blue-600 text-white px-6 py-3 text-lg rounded-lg font-semibold transition duration-300">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4">About JJK High School</h2>
+        <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- Image Column -->
+        <div class="lg:w-1/2 w-full">
+          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+               alt="Students learning" class="rounded-lg shadow-xl w-full h-auto object-cover">
+        </div>
+        
+        <!-- Content Column -->
+        <div class="lg:w-1/2 w-full">
+          <h3 class="text-2xl font-bold font-times text-gray-800 mb-6">Excellence in Education Since 1985</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            At JJK High School, we've been shaping young minds for over three decades with our unique 
+            blend of academic rigor and character development.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-1">Proven Academic Success</h4>
+                <p class="text-gray-600">98% college acceptance rate</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800 mb-1">Award-Winning Faculty</h4>
+                <p class="text-gray-600">72% hold advanced degrees</p>
+              </div>
+            </div>
+          </div>
+          
+          <button class="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition duration-300">
+            Meet Our Faculty →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4">Academic Programs</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Rigorous curriculum designed to prepare students</p>
+        <div class="w-20 h-1 bg-blue-500 mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- STEM Card -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div class="h-48 bg-blue-600 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold font-times text-gray-800 mb-3">STEM Honors</h3>
+            <p class="text-gray-600 mb-4">Advanced coursework in science and technology.</p>
+            <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
+              Learn more
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- STEM Card -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div class="h-48 bg-blue-600 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold font-times text-gray-800 mb-3">STEM Honors</h3>
+            <p class="text-gray-600 mb-4">Advanced coursework in science and technology.</p>
+            <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
+              Learn more
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- STEM Card -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div class="h-48 bg-blue-600 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold font-times text-gray-800 mb-3">STEM Honors</h3>
+            <p class="text-gray-600 mb-4">Advanced coursework in science and technology.</p>
+            <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
+              Learn more
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- More program cards would go here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-blue-600 text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold font-times mb-4">Hear From Our Community</h2>
+        <div class="w-20 h-1 bg-white mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white bg-opacity-10 rounded-xl p-8 border border-white border-opacity-20">
+          <div class="flex items-center mb-6">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                 alt="Student" class="w-12 h-12 rounded-full border-2 border-white">
+            <div class="ml-4">
+              <h4 class="font-bold">Sarah Johnson</h4>
+              <p class="text-blue-100 text-sm">Class of 2022</p>
+            </div>
+          </div>
+          <p class="italic">"JJK's STEM program gave me the foundation to excel in my engineering studies."</p>
+        </div>
+
+        <!-- Testimonial 1 -->
+        <div class="bg-white bg-opacity-10 rounded-xl p-8 border border-white border-opacity-20">
+          <div class="flex items-center mb-6">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                 alt="Student" class="w-12 h-12 rounded-full border-2 border-white">
+            <div class="ml-4">
+              <h4 class="font-bold">Sarah Johnson</h4>
+              <p class="text-blue-100 text-sm">Class of 2022</p>
+            </div>
+          </div>
+          <p class="italic">"JJK's STEM program gave me the foundation to excel in my engineering studies."</p>
+        </div>
+
+        <!-- Testimonial 1 -->
+        <div class="bg-white bg-opacity-10 rounded-xl p-8 border border-white border-opacity-20">
+          <div class="flex items-center mb-6">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                 alt="Student" class="w-12 h-12 rounded-full border-2 border-white">
+            <div class="ml-4">
+              <h4 class="font-bold">Sarah Johnson</h4>
+              <p class="text-blue-100 text-sm">Class of 2022</p>
+            </div>
+          </div>
+          <p class="italic">"JJK's STEM program gave me the foundation to excel in my engineering studies."</p>
+        </div>
+        
+        <!-- More testimonials would go here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions Section -->
+  <section id="admissions" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4">Begin Your JJK Journey</h2>
+        <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <!-- Left Column -->
+          <div class="md:w-1/2 bg-blue-600 text-white p-12 flex flex-col justify-center">
+            <h3 class="text-2xl font-bold font-times mb-6">Admissions Timeline</h3>
+            <ul class="space-y-6">
+              <li class="flex items-start">
+                <div class="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span class="font-bold">1</span>
+                </div>
+                <div>
+                  <h4 class="font-bold">September 1</h4>
+                  <p class="text-blue-100">Applications Open</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span class="font-bold">2</span>
+                </div>
+                <div>
+                  <h4 class="font-bold">January 15</h4>
+                  <p class="text-blue-100">Application Deadline</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div class="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span class="font-bold">3</span>
+                </div>
+                <div>
+                  <h4 class="font-bold">March 1</h4>
+                  <p class="text-blue-100">Admission Decisions</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Right Column (Form) -->
+          <div class="md:w-1/2 p-12">
+            <h3 class="text-2xl font-bold font-times text-gray-800 mb-6">Request Information</h3>
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="block text-gray-700 mb-2">Parent Name</label>
+                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div>
+                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div>
+                <label for="grade" class="block text-gray-700 mb-2">Student Grade</label>
+                <select id="grade" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option>Select Grade</option>
+                  <option>9th Grade</option>
+                  <option>10th Grade</option>
+                  <option>11th Grade</option>
+                  <option>12th Grade</option>
+                </select>
+              </div>
+              <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition duration-300">
+                Get Started
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faculty Spotlight -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4">Meet Our Faculty</h2>
+        <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Teacher 1 -->
+        <div class="text-center">
+          <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-500">
+            <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                alt="Dr. Sarah Chen" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold font-times text-gray-800 mb-2">Dr. Sarah Chen</h3>
+          <p class="text-blue-600 font-semibold mb-4">Science Department Chair</p>
+          <p class="text-gray-600 mb-4">PhD in Biochemistry from Stanford. 15 years teaching experience.</p>
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="text-blue-500 hover:text-blue-700">
+              <span class="sr-only">Research Profile</span>
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Teacher 2 -->
+        <div class="text-center">
+          <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-500">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                alt="Mr. David Rodriguez" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold font-times text-gray-800 mb-2">Mr. David Rodriguez</h3>
+          <p class="text-blue-600 font-semibold mb-4">Humanities Faculty</p>
+          <p class="text-gray-600 mb-4">M.A. in Literature. Published poet and debate coach.</p>
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="text-blue-500 hover:text-blue-700">
+              <span class="sr-only">Published Works</span>
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2h-12c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-16c0-1.1-.9-2-2-2zm-1.2 10.5h-4.8v4.8h-1.2v-4.8h-4.8v-1.2h4.8v-4.8h1.2v4.8h4.8v1.2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Teacher 3 -->
+        <div class="text-center">
+          <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-500">
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                alt="Ms. Emily Park" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold font-times text-gray-800 mb-2">Ms. Emily Park</h3>
+          <p class="text-blue-600 font-semibold mb-4">Visual Arts Director</p>
+          <p class="text-gray-600 mb-4">BFA from RISD. Exhibited in 3 countries.</p>
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="text-blue-500 hover:text-blue-700">
+              <span class="sr-only">Art Portfolio</span>
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#about" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
+          View All Faculty
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alumni Success -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4">Alumni Success Stories</h2>
+        <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 mb-16">
+        <!-- Alumni 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center">
+          <div class="md:w-1/3 mb-6 md:mb-0">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                alt="Jessica Kim" class="w-32 h-32 rounded-full object-cover border-4 border-blue-100 mx-auto">
+          </div>
+          <div class="md:w-2/3 md:pl-8 text-center md:text-left">
+            <h3 class="text-xl font-bold font-times text-gray-800 mb-2">Jessica Kim</h3>
+            <p class="text-blue-600 font-semibold mb-3">Class of 2015 | Google Software Engineer</p>
+            <p class="text-gray-600 mb-4">"JJK's computer science program gave me the foundation to thrive in Silicon Valley. The advanced algorithms class was particularly transformative."</p>
+            <a href="#" class="text-blue-500 font-semibold hover:text-blue-700 inline-flex items-center">
+              Full Story
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Alumni 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center">
+          <div class="md:w-1/3 mb-6 md:mb-0">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                alt="Michael Santos" class="w-32 h-32 rounded-full object-cover border-4 border-blue-100 mx-auto">
+          </div>
+          <div class="md:w-2/3 md:pl-8 text-center md:text-left">
+            <h3 class="text-xl font-bold font-times text-gray-800 mb-2">Michael Santos</h3>
+            <p class="text-blue-600 font-semibold mb-3">Class of 2012 | Johns Hopkins Medical Resident</p>
+            <p class="text-gray-600 mb-4">"The research opportunities at JJK prepared me for the rigors of medical school. I still use lab techniques I learned in AP Biology."</p>
+            <a href="#" class="text-blue-500 font-semibold hover:text-blue-700 inline-flex items-center">
+              Full Story
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
+          More Alumni Stories
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <div class="text-2xl font-bold font-times mb-4">JJK High School</div>
+        <p class="max-w-2xl mx-auto mb-8">Preparing students for success in college, career, and life.</p>
+        <div class="flex justify-center space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white">
+            <span class="sr-only">Facebook</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+            </svg>
+          </a>
+          <!-- More social icons would go here -->
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
