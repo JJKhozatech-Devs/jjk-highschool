@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JJK High School</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configure Tailwind to include Times New Roman -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              times: ['"Times New Roman"', "Times", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fallback font -->
+    <style>
+      .font-times {
+        font-family: "Times New Roman", Times, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="bg-blue-600 text-white shadow-md relative z-50">
+      <div
+        class="container mx-auto flex items-center justify-between px-4 py-4"
+      >
+        <div class="text-2xl font-bold font-times">JJK High School</div>
+        <nav class="space-x-6">
+          <a href="#home" class="hover:text-gray-200 text-lg">Home</a>
+          <a href="#about" class="hover:text-gray-200 text-lg">About</a>
+          <a href="#admissions" class="hover:text-gray-200 text-lg"
+            >Admissions</a
+          >
+          <a href="#contact" class="hover:text-gray-200 text-lg">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contact Page Hero -->
+    <section
+      class="relative bg-cover bg-center -mt-20 pt-20 h-[60vh] text-white"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+      "
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-blue-900 opacity-75"></div>
+
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4"
+      >
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 font-times">
+          <span class="inline-block mr-2">📬</span> Get in Touch with JJK High
+          School
+        </h1>
+        <p class="text-xl md:text-2xl max-w-2xl mb-8">
+          Whether you have a question, need assistance, or want to schedule a
+          visit — we're here to help.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="tel:+27000000000"
+            class="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg rounded-lg font-semibold transition duration-300 flex items-center justify-center"
+          >
+            <span class="mr-2">📞</span> Call Us
+          </a>
+          <a
+            href="#contact-form"
+            class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white px-8 py-4 text-lg rounded-lg font-semibold transition duration-300 flex items-center justify-center"
+          >
+            <span class="mr-2">📧</span> Send a Message
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Address -->
+            <div class="bg-blue-50 p-8 rounded-xl text-center">
+              <div class="text-blue-600 text-4xl mb-4">🏫</div>
+              <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
+                Visit Us
+              </h3>
+              <address class="text-gray-700 not-italic">
+                123 Education Road<br />
+                Durban North, 4051<br />
+                KwaZulu-Natal, South Africa
+              </address>
+            </div>
+
+            <!-- Contact -->
+            <div class="bg-blue-50 p-8 rounded-xl text-center">
+              <div class="text-blue-600 text-4xl mb-4">📱</div>
+              <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
+                Contact Details
+              </h3>
+              <div class="space-y-2 text-gray-700">
+                <p>
+                  <strong>Phone:</strong>
+                  <a href="tel:+27000000000" class="hover:text-blue-600"
+                    >+27 00 000 0000</a
+                  >
+                </p>
+                <p>
+                  <strong>Email:</strong>
+                  <a
+                    href="mailto:info@jjkhighschool.co.za"
+                    class="hover:text-blue-600"
+                    >info@jjkhighschool.co.za</a
+                  >
+                </p>
+                <p>
+                  <strong>Admissions:</strong>
+                  <a
+                    href="mailto:admissions@jjkhighschool.co.za"
+                    class="hover:text-blue-600"
+                    >admissions@jjkhighschool.co.za</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="bg-blue-50 p-8 rounded-xl text-center">
+              <div class="text-blue-600 text-4xl mb-4">🕒</div>
+              <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
+                Office Hours
+              </h3>
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Mon-Fri:</strong> 7:30 AM - 4:00 PM</li>
+                <li><strong>Sat:</strong> 8:00 AM - 12:00 PM</li>
+                <li><strong>Sun:</strong> Closed</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            id="contact-form"
+            class="mt-20 bg-blue-600 text-white rounded-xl shadow-xl overflow-hidden"
+          >
+            <div class="md:flex">
+              <div
+                class="md:w-1/3 bg-blue-700 p-10 flex flex-col justify-center"
+              >
+                <h2 class="text-2xl font-bold font-times mb-4">
+                  Send Us a Message
+                </h2>
+                <p>
+                  We typically respond within 24-48 hours during business days.
+                </p>
+              </div>
+              <div class="md:w-2/3 bg-white p-8 md:p-10">
+                <form class="space-y-6">
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        for="name"
+                        class="block text-gray-700 font-medium mb-2"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        id="name"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="email"
+                        class="block text-gray-700 font-medium mb-2"
+                        >Email Address</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="subject"
+                      class="block text-gray-700 font-medium mb-2"
+                      >Subject</label
+                    >
+                    <input
+                      type="text"
+                      id="subject"
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="message"
+                      class="block text-gray-700 font-medium mb-2"
+                      >Your Message</label
+                    >
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition duration-300 w-full"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="bg-gray-100 h-96">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1ddummy!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMjQnMjkuNyJTIDTCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sza!4v0000000000!5m2!1sen!2sza"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <div class="text-2xl font-bold font-times mb-4">JJK High School</div>
+          <p class="max-w-2xl mx-auto mb-8">
+            Preparing students for success in college, career, and life.
+          </p>
+          <div class="flex justify-center space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <span class="sr-only">Facebook</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+            <!-- More social icons would go here -->
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

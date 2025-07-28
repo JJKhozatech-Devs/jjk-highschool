@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JJK High School</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configure Tailwind to include Times New Roman -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              times: ['"Times New Roman"', "Times", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fallback font -->
+    <style>
+      .font-times {
+        font-family: "Times New Roman", Times, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="bg-blue-600 text-white shadow-md relative z-50">
+      <div
+        class="container mx-auto flex items-center justify-between px-4 py-4"
+      >
+        <div class="text-2xl font-bold font-times">JJK High School</div>
+        <nav class="space-x-6">
+          <a href="#home" class="hover:text-gray-200 text-lg">Home</a>
+          <a href="#about" class="hover:text-gray-200 text-lg">About</a>
+          <a href="#admissions" class="hover:text-gray-200 text-lg"
+            >Admissions</a
+          >
+          <a href="#contact" class="hover:text-gray-200 text-lg">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center -mt-20 pt-20 h-screen text-white"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1549861833-c5932fd19229?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <!-- Fallback background color -->
+      <div class="absolute inset-0 bg-blue-900"></div>
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 font-times">
+          Welcome to JJK High School
+        </h1>
+        <p class="text-lg md:text-xl max-w-2xl mb-6">
+          Empowering the next generation with knowledge, values, and a passion
+          for excellence.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#about"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg rounded-lg font-semibold transition duration-300"
+          >
+            Learn More
+          </a>
+          <a
+            href="#contact"
+            class="bg-transparent border border-white hover:bg-white hover:text-blue-600 text-white px-6 py-3 text-lg rounded-lg font-semibold transition duration-300"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4"
+          >
+            Our Story
+          </h2>
+          <div class="w-20 h-1 bg-blue-500 mx-auto mb-12"></div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+          <!-- Image Column -->
+          <div class="lg:w-1/2">
+            <div class="rounded-xl overflow-hidden shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="JJK High School Campus"
+                class="w-full h-auto object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="lg:w-1/2">
+            <h3 class="text-2xl font-bold font-times text-gray-800 mb-6">
+              JJK High School was established in 2010 in the heart of Durban
+              North
+            </h3>
+
+            <div class="space-y-4 text-gray-700">
+              <p>
+                With one clear goal — to provide quality education that empowers
+                the youth of South Africa to become responsible,
+                forward-thinking leaders. What started as a small initiative
+                with just 40 learners and 5 teachers has grown into a vibrant,
+                diverse learning environment serving over 600 students across
+                Grades 8 to 12.
+              </p>
+
+              <p>
+                Our school was founded on the belief that every learner deserves
+                access to quality education in a safe, nurturing space. At JJK,
+                we combine academic excellence with strong moral values,
+                preparing learners not only for exams but for life.
+              </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="bg-blue-50 p-4 rounded-lg text-center">
+                <p class="text-3xl font-bold text-blue-600">600+</p>
+                <p class="text-gray-700">Students</p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg text-center">
+                <p class="text-3xl font-bold text-blue-600">40</p>
+                <p class="text-gray-700">Founding Students</p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg text-center">
+                <p class="text-3xl font-bold text-blue-600">2010</p>
+                <p class="text-gray-700">Established</p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg text-center">
+                <p class="text-3xl font-bold text-blue-600">5</p>
+                <p class="text-gray-700">Founding Teachers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision, Mission & Values Section -->
+    <section class="py-20 bg-blue-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4"
+          >
+            Vision, Mission & Values
+          </h2>
+          <div class="w-20 h-1 bg-blue-500 mx-auto mb-12"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Vision Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300"
+          >
+            <div class="text-blue-600 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold font-times text-gray-800 mb-4">
+              Our Vision
+            </h3>
+            <p class="text-gray-700">
+              To be a leading centre of academic excellence, innovation, and
+              holistic learner development in South Africa.
+            </p>
+          </div>
+
+          <!-- Mission Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300"
+          >
+            <div class="text-blue-600 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold font-times text-gray-800 mb-4">
+              Our Mission
+            </h3>
+            <p class="text-gray-700">
+              JJK High School is committed to delivering inclusive,
+              learner-centered education that equips our students with
+              knowledge, character, and critical thinking skills. Through
+              passionate teaching, modern technology, and a culture of respect,
+              we prepare our learners to thrive in a changing world.
+            </p>
+          </div>
+
+          <!-- Values Card -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300"
+          >
+            <div class="text-blue-600 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15l8-8m0 0l-8-8m8 8H4"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold font-times text-gray-800 mb-4">
+              Our Core Values
+            </h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span
+                  ><strong>Excellence:</strong> We strive for the highest
+                  standards</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span
+                  ><strong>Respect:</strong> Every person treated with
+                  dignity</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span><strong>Discipline:</strong> Promoting self-respect</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span><strong>Integrity:</strong> Honesty at our core</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span><strong>Ubuntu:</strong> Community and compassion</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principal's Message Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4"
+          >
+            Principal's Message
+          </h2>
+          <div class="w-20 h-1 bg-blue-500 mx-auto mb-12"></div>
+        </div>
+
+        <div
+          class="max-w-4xl mx-auto bg-blue-50 rounded-xl overflow-hidden shadow-lg"
+        >
+          <div class="md:flex">
+            <!-- Principal's Photo -->
+            <div class="md:w-1/3 bg-gray-100">
+              <img
+                src="https://images.unsplash.com/photo-1590086783191-a0694c7d1e6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                alt="Mrs. Nomusa Khumalo, Principal"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Message Content -->
+            <div class="md:w-2/3 p-8 md:p-10">
+              <h3 class="text-xl font-bold font-times text-gray-800 mb-2">
+                Dear Parents, Learners, and Visitors,
+              </h3>
+
+              <div class="space-y-4 text-gray-700 mb-6">
+                <p>Welcome to JJK High School — where every learner matters.</p>
+
+                <p>
+                  At JJK, we believe education goes beyond the classroom. We are
+                  committed to building a safe, inclusive, and inspiring
+                  environment where learners are encouraged to dream big, work
+                  hard, and make a meaningful impact in the world.
+                </p>
+
+                <p>
+                  Our dedicated staff, modern facilities, and learner-focused
+                  curriculum ensure that each child receives the support they
+                  need to thrive academically and socially. Whether your child
+                  excels in maths, music, or leadership — there's a place for
+                  them here.
+                </p>
+
+                <p>
+                  I invite you to become part of our growing family. Together,
+                  we can nurture tomorrow's leaders.
+                </p>
+              </div>
+
+              <div class="border-t border-blue-200 pt-6">
+                <p class="font-bold font-times text-gray-800">Warm regards,</p>
+                <p class="text-blue-600 font-bold">Mr. Nkosinathi Khoza</p>
+                <p class="text-gray-600">Principal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Life Section -->
+    <section id="campus-life" class="py-20 bg-blue-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4"
+          >
+            Campus Life
+          </h2>
+          <div class="w-20 h-1 bg-blue-500 mx-auto mb-12"></div>
+          <p class="max-w-3xl mx-auto text-lg text-gray-700">
+            Life at JJK High School is vibrant, energetic, and enriching. Our
+            learners have access to a variety of extracurricular activities that
+            foster teamwork, leadership, and creativity.
+          </p>
+        </div>
+
+        <!-- Activities Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <!-- Academic Clubs -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+          >
+            <div class="h-48 bg-blue-600 flex items-center justify-center">
+              <svg
+                class="h-16 w-16 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold font-times text-gray-800 mb-3">
+                Academic Clubs
+              </h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>Science Club</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>Maths Olympiad</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>Coding & Robotics</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sports Teams -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+          >
+            <div class="h-48 bg-blue-600 flex items-center justify-center">
+              <svg
+                class="h-16 w-16 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold font-times text-gray-800 mb-3">
+                Sports Teams
+              </h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>Soccer</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>Netball</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>Athletics</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>Rugby</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Cultural Activities -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+          >
+            <div class="h-48 bg-blue-600 flex items-center justify-center">
+              <svg
+                class="h-16 w-16 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold font-times text-gray-800 mb-3">
+                Cultural Societies
+              </h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>Drama Society</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>Debate Team</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  <span>School Choir</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Content -->
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="bg-white p-8 rounded-xl shadow-md mb-8">
+            <h3 class="text-xl font-bold font-times text-gray-800 mb-4">
+              Special Programs
+            </h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <p class="font-semibold text-blue-600">Community Outreach</p>
+                <p class="text-gray-700 text-sm">
+                  Making a difference in our community
+                </p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <p class="font-semibold text-blue-600">Annual Camps</p>
+                <p class="text-gray-700 text-sm">
+                  Building character through adventure
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-lg text-gray-700 italic">
+            "We believe in developing well-rounded learners who not only perform
+            academically but also grow emotionally, socially, and ethically. At
+            JJK, learning doesn't stop at the bell — it continues on the field,
+            on stage, and in our community."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admissions Snapshot -->
+    <section id="admissions" class="py-20 bg-blue-50">
+      <div class="container mx-auto px-4">
+        <div
+          class="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+        >
+          <div class="md:flex">
+            <!-- Left Column -->
+            <div
+              class="md:w-2/5 bg-blue-600 text-white p-12 flex flex-col justify-center"
+            >
+              <h2 class="text-3xl font-bold font-times mb-6">
+                Ready to Apply?
+              </h2>
+              <p class="mb-8">Begin your application in just 15 minutes</p>
+              <a
+                href="#"
+                class="bg-white text-blue-600 hover:bg-blue-100 px-6 py-3 rounded-lg font-bold text-center transition duration-300"
+              >
+                Start Application
+              </a>
+            </div>
+
+            <!-- Right Column -->
+            <div class="md:w-3/5 p-12">
+              <div class="grid sm:grid-cols-2 gap-8">
+                <div>
+                  <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
+                    Key Dates
+                  </h3>
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <div
+                        class="bg-blue-100 text-blue-600 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="font-semibold">Aug 15</p>
+                        <p class="text-gray-600 text-sm">Applications Open</p>
+                      </div>
+                    </li>
+                    <!-- More date items -->
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
+                    Requirements
+                  </h3>
+                  <ul class="space-y-3">
+                    <li class="flex items-start">
+                      <svg
+                        class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <span>Transcripts</span>
+                    </li>
+                    <!-- More requirement items -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <div class="text-2xl font-bold font-times mb-4">JJK High School</div>
+          <p class="max-w-2xl mx-auto mb-8">
+            Preparing students for success in college, career, and life.
+          </p>
+          <div class="flex justify-center space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <span class="sr-only">Facebook</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+            <!-- More social icons would go here -->
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
