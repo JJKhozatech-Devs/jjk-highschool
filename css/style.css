@@ -1,0 +1,32 @@
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #facc15; /* Yellow-300 (Tailwind style) */
+}
+
+.nav-link.active {
+  color: #facc15;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  width: 0;
+  height: 2px;
+  background-color: #facc15;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: calc(100% - 2rem); /* leaves some padding on sides */
+}

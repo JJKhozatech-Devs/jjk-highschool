@@ -9,6 +9,8 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Configure Tailwind to include Times New Roman -->
     <script>
@@ -34,7 +36,8 @@
     <!-- Preloader -->
     <div
       id="preloader"
-      class="fixed inset-0 bg-gray-900 z-50 flex flex-col items-center justify-center text-white"
+      class="fixed inset-0 bg-gray-900 flex flex-col items-center justify-center text-white"
+      style="z-index: 9999"
     >
       <!-- Logo Text -->
       <div class="text-3xl font-bold font-times mb-4">
@@ -152,9 +155,10 @@
 
       <div
         class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4"
+        data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1200"
       >
         <h1 class="text-4xl md:text-5xl font-bold mb-6 font-times">
-          <span class="inline-block mr-2">📬</span> Get in Touch with JJK High
+          Get in Touch with JJK High
           School
         </h1>
         <p class="text-xl md:text-2xl max-w-2xl mb-8">
@@ -166,13 +170,13 @@
             href="tel:+27000000000"
             class="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg rounded-lg font-semibold transition duration-300 flex items-center justify-center"
           >
-            <span class="mr-2">📞</span> Call Us
+           Call Us
           </a>
           <a
             href="#contact-form"
             class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white px-8 py-4 text-lg rounded-lg font-semibold transition duration-300 flex items-center justify-center"
           >
-            <span class="mr-2">📧</span> Send a Message
+          Send a Message
           </a>
         </div>
       </div>
@@ -184,20 +188,20 @@
         <div class="max-w-6xl mx-auto">
           <div class="grid md:grid-cols-3 gap-8">
             <!-- Address -->
-            <div class="bg-blue-50 p-8 rounded-xl text-center">
+            <div class="bg-blue-50 p-8 rounded-xl text-center" data-aos="fade-up">
               <div class="text-blue-600 text-4xl mb-4">🏫</div>
               <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
                 Visit Us
               </h3>
               <address class="text-gray-700 not-italic">
-                123 Education Road<br />
-                Durban North, 4051<br />
+                12 Harding Street<br />
+                Newcastle, 2940<br />
                 KwaZulu-Natal, South Africa
               </address>
             </div>
 
             <!-- Contact -->
-            <div class="bg-blue-50 p-8 rounded-xl text-center">
+            <div class="bg-blue-50 p-8 rounded-xl text-center" data-aos="fade-up">
               <div class="text-blue-600 text-4xl mb-4">📱</div>
               <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
                 Contact Details
@@ -205,31 +209,31 @@
               <div class="space-y-2 text-gray-700">
                 <p>
                   <strong>Phone:</strong>
-                  <a href="tel:+27000000000" class="hover:text-blue-600"
-                    >+27 00 000 0000</a
+                  <a href="tel:+27615295008" class="hover:text-blue-600"
+                    >+ 27 61 529 5008</a
                   >
                 </p>
                 <p>
                   <strong>Email:</strong>
                   <a
-                    href="mailto:info@jjkhighschool.co.za"
+                    href="mailto:info@jjkhozatech.com"
                     class="hover:text-blue-600"
-                    >info@jjkhighschool.co.za</a
+                    >info@jjkhozatech.com</a
                   >
                 </p>
                 <p>
                   <strong>Admissions:</strong>
                   <a
-                    href="mailto:admissions@jjkhighschool.co.za"
+                    href="mailto:admissions@jjkhozatech.com"
                     class="hover:text-blue-600"
-                    >admissions@jjkhighschool.co.za</a
+                    >admissions@jjkhozatech.com</a
                   >
                 </p>
               </div>
             </div>
 
             <!-- Hours -->
-            <div class="bg-blue-50 p-8 rounded-xl text-center">
+            <div class="bg-blue-50 p-8 rounded-xl text-center" data-aos="fade-up">
               <div class="text-blue-600 text-4xl mb-4">🕒</div>
               <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
                 Office Hours
@@ -246,6 +250,8 @@
           <div
             id="contact-form"
             class="mt-20 bg-blue-600 text-white rounded-xl shadow-xl overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="400"
           >
             <div class="md:flex">
               <div
@@ -391,5 +397,13 @@
     </button>
     <script src="js/nav.js"></script>
     <script src="js/main.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
   </body>
 </html>

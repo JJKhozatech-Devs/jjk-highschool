@@ -9,6 +9,8 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Configure Tailwind to include Times New Roman -->
     <script>
@@ -34,7 +36,8 @@
     <!-- Preloader -->
     <div
       id="preloader"
-      class="fixed inset-0 bg-gray-900 z-50 flex flex-col items-center justify-center text-white"
+      class="fixed inset-0 bg-gray-900 flex flex-col items-center justify-center text-white"
+      style="z-index: 9999"
     >
       <!-- Logo Text -->
       <div class="text-3xl font-bold font-times mb-4">
@@ -207,7 +210,7 @@
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2
             class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4"
           >
@@ -218,7 +221,7 @@
 
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <!-- Image Column -->
-          <div class="lg:w-1/2 w-full">
+          <div class="lg:w-1/2 w-full" data-aos="fade-up">
             <img
               src="assets/images/school-kids.jpg"
               alt="Students learning"
@@ -227,11 +230,11 @@
           </div>
 
           <!-- Content Column -->
-          <div class="lg:w-1/2 w-full">
-            <h3 class="text-2xl font-bold font-times text-gray-800 mb-6">
+          <div class="lg:w-1/2 w-full" data-aos="fade-up" data-aos-delay="500">
+            <h3 class="text-2xl font-bold font-times text-gray-800 mb-6" data-aos="slide-left" data-aos-delay="400">
               Empowering Future Leaders Since 1985
             </h3>
-            <p class="text-gray-600 mb-6 leading-relaxed">
+            <p class="text-gray-600 mb-6 leading-relaxed" data-aos="slide-left" data-aos-delay="400">
               At JJK High School, we provide a well-rounded education that
               prepares learners from Grade 8 to 12 for academic excellence,
               leadership, and lifelong success. With a focus on discipline,
@@ -239,7 +242,7 @@
               their full potential.
             </p>
 
-            <div class="space-y-6">
+            <div class="space-y-6" data-aos="slide-left" data-aos-delay="400">
               <div class="flex items-start">
                 <div class="bg-blue-100 p-3 rounded-full mr-4">
                   <svg
@@ -283,7 +286,7 @@
                     ></path>
                   </svg>
                 </div>
-                <div>
+                <div data-aos="slide-left" data-aos-delay="400">
                   <h4 class="font-bold text-gray-800 mb-1">
                     Dedicated Educators
                   </h4>
@@ -308,7 +311,7 @@
     <!-- Why Choose Us Section -->
     <section class="py-20 bg-white">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2
             class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4"
           >
@@ -323,6 +326,7 @@
             <!-- CAPS Curriculum -->
             <div
               class="bg-blue-50 p-6 rounded-xl text-center hover:shadow-md transition duration-300"
+              data-aos="fade-up"
             >
               <div class="text-blue-600 text-3xl mb-3">📚</div>
               <h3 class="font-bold font-times text-lg text-gray-800 mb-2">
@@ -336,6 +340,7 @@
             <!-- Passionate Teachers -->
             <div
               class="bg-blue-50 p-6 rounded-xl text-center hover:shadow-md transition duration-300"
+              data-aos="fade-up"
             >
               <div class="text-blue-600 text-3xl mb-3">👩‍🏫</div>
               <h3 class="font-bold font-times text-lg text-gray-800 mb-2">
@@ -347,6 +352,7 @@
             <!-- Modern Classrooms -->
             <div
               class="bg-blue-50 p-6 rounded-xl text-center hover:shadow-md transition duration-300"
+              data-aos="fade-up"
             >
               <div class="text-blue-600 text-3xl mb-3">💻</div>
               <h3 class="font-bold font-times text-lg text-gray-800 mb-2">
@@ -358,6 +364,7 @@
             <!-- Safe Campus -->
             <div
               class="bg-blue-50 p-6 rounded-xl text-center hover:shadow-md transition duration-300"
+              data-aos="fade-up"
             >
               <div class="text-blue-600 text-3xl mb-3">🛡️</div>
               <h3 class="font-bold font-times text-lg text-gray-800 mb-2">
@@ -369,6 +376,7 @@
             <!-- Sports & Arts -->
             <div
               class="bg-blue-50 p-6 rounded-xl text-center hover:shadow-md transition duration-300"
+              data-aos="fade-up"
             >
               <div class="text-blue-600 text-3xl mb-3">⚽🎨</div>
               <h3 class="font-bold font-times text-lg text-gray-800 mb-2">
@@ -380,6 +388,7 @@
             <!-- Individual Attention -->
             <div
               class="bg-blue-50 p-6 rounded-xl text-center hover:shadow-md transition duration-300"
+              data-aos="fade-up"
             >
               <div class="text-blue-600 text-3xl mb-3">👂</div>
               <h3 class="font-bold font-times text-lg text-gray-800 mb-2">
@@ -392,6 +401,7 @@
           <!-- Mission Reinforcement -->
           <div
             class="bg-blue-600 text-white rounded-xl p-8 md:p-10 text-center max-w-3xl mx-auto"
+            data-aos="fade-up"
           >
             <p class="text-lg md:text-xl italic mb-4">
               "At JJK High School, we're committed to delivering inclusive,
@@ -413,19 +423,19 @@
     <!-- Featured Programs Section -->
     <section class="py-20 bg-blue-50">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2
             class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4"
           >
             Featured Programs
           </h2>
           <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+          <p class="text-xl text-gray-700 max-w-2xl mx-auto" data-aos="fade-up">
             Specialized learning tracks to nurture every student's potential
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up">
           <!-- Academic Excellence -->
           <div
             class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
@@ -616,7 +626,7 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-blue-600 text-white">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2 class="text-3xl md:text-4xl font-bold font-times mb-4">
             Hear From Our Community
           </h2>
@@ -627,6 +637,7 @@
           <!-- Testimonial 1 -->
           <div
             class="bg-white bg-opacity-10 rounded-xl p-8 border border-white border-opacity-20"
+            data-aos="fade-up"
           >
             <div class="flex items-center mb-6">
               <img
@@ -648,6 +659,7 @@
           <!-- Testimonial 1 -->
           <div
             class="bg-white bg-opacity-10 rounded-xl p-8 border border-white border-opacity-20"
+            data-aos="fade-up"
           >
             <div class="flex items-center mb-6">
               <img
@@ -669,6 +681,7 @@
           <!-- Testimonial 1 -->
           <div
             class="bg-white bg-opacity-10 rounded-xl p-8 border border-white border-opacity-20"
+            data-aos="fade-up"
           >
             <div class="flex items-center mb-6">
               <img
@@ -695,7 +708,7 @@
     <!-- Faculty Spotlight -->
     <section class="py-20 bg-white">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2
             class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4"
           >
@@ -706,7 +719,7 @@
 
         <div class="grid md:grid-cols-3 gap-10">
           <!-- Teacher 1 -->
-          <div class="text-center">
+          <div class="text-center" data-aos="fade-up">
             <div
               class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-500"
             >
@@ -738,7 +751,7 @@
           </div>
 
           <!-- Teacher 2 -->
-          <div class="text-center">
+          <div class="text-center" data-aos="fade-up">
             <div
               class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-500"
             >
@@ -768,7 +781,7 @@
           </div>
 
           <!-- Teacher 3 -->
-          <div class="text-center">
+          <div class="text-center" data-aos="fade-up">
             <div
               class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-500"
             >
@@ -798,7 +811,7 @@
           </div>
         </div>
 
-        <div class="text-center mt-12">
+        <div class="text-center mt-12" data-aos="fade-up">
           <a
             href="#about"
             class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
@@ -812,7 +825,7 @@
     <!-- Call to Action Section -->
     <section class="py-20 bg-blue-600 text-white">
       <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
           <h2 class="text-3xl md:text-4xl font-bold font-times mb-6">
             Ready to Join JJK High School?
           </h2>
@@ -843,7 +856,7 @@
     <!-- Alumni Success -->
     <section class="py-20 bg-gray-50">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2
             class="text-3xl md:text-4xl font-bold font-times text-blue-600 mb-4"
           >
@@ -856,6 +869,7 @@
           <!-- Alumni 1 -->
           <div
             class="bg-white p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center"
+            data-aos="fade-up"
           >
             <div class="md:w-1/3 mb-6 md:mb-0">
               <img
@@ -901,6 +915,7 @@
           <!-- Alumni 2 -->
           <div
             class="bg-white p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center"
+            data-aos="fade-up"
           >
             <div class="md:w-1/3 mb-6 md:mb-0">
               <img
@@ -944,7 +959,7 @@
           </div>
         </div>
 
-        <div class="text-center">
+        <div class="text-center" data-aos="fade-up">
           <a
             href="#"
             class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
@@ -961,7 +976,7 @@
         class="container mx-auto px-4 md:flex md:items-center md:justify-between text-center md:text-left"
       >
         <!-- Left: Copyright -->
-        <div class="mb-4 md:mb-0">
+        <div class="mb-4 md:mb-0" data-aos="fade-up">
           <p class="text-sm">
             &copy; 2025 <span class="font-semibold">JJK High School</span>. All
             rights reserved.
@@ -972,7 +987,7 @@
         </div>
 
         <!-- Right: Social Icons -->
-        <div class="flex justify-center md:justify-end space-x-4">
+        <div class="flex justify-center md:justify-end space-x-4" data-aos="fade-up">
           <a href="#" class="text-white hover:text-blue-400 transition">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path
@@ -1008,5 +1023,13 @@
     </button>
     <script src="js/nav.js"></script>
     <script src="js/main.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
   </body>
 </html>
