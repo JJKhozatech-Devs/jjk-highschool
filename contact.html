@@ -50,116 +50,114 @@
       ></div>
     </div>
 
-    <!-- Top Bar -->
-    <div
-      class="bg-gray-800 text-white text-sm py-2 px-4 hidden md:flex justify-between items-center"
-    >
-      <div>
-        <span class="mr-4"><i class="fas fa-phone"></i> +27 71 234 5678</span>
-        <span><i class="fas fa-envelope"></i> info@jjkhighschool.co.za</span>
-      </div>
-      <div>Mon - Fri: 07:30 - 15:30</div>
-    </div>
-
-    <!-- Navbar -->
-    <header class="bg-blue-600 text-white shadow-md relative z-50">
-      <div
-        class="container mx-auto flex items-center justify-between px-4 py-4"
-      >
-        <!-- Logo with two colors -->
-        <div class="text-2xl font-bold font-times">
-          <a href="index.html">
-            <span class="text-white">JJK</span
-            ><span class="text-yellow-300"> High School</span>
-          </a>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <nav
-          class="hidden md:flex space-x-6 text-lg font-semibold items-center"
-        >
-          <a
-            href="index.html"
-            class="nav-link pb-1 border-b-2 border-transparent hover:border-white transition"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="nav-link pb-1 border-b-2 border-transparent hover:border-white transition"
-            >About</a
-          >
-          <a
-            href="admissions.html"
-            class="nav-link pb-1 border-b-2 border-transparent hover:border-white transition"
-            >Admissions</a
-          >
-          <a
-            href="contact.html"
-            class="nav-link pb-1 border-b-2 border-transparent hover:border-white transition"
-            >Contact</a
-          >
-          <a
-            href="apply.html"
-            class="bg-yellow-400 hover:bg-yellow-500 text-blue-800 font-bold py-2 px-4 rounded transition"
-            >Apply Now</a
-          >
-        </nav>
-
-        <!-- Mobile Menu Toggle -->
-        <button
-          class="md:hidden text-white focus:outline-none"
-          id="menu-toggle"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="md:hidden hidden px-4 pb-4 space-y-3 bg-blue-700 text-white font-medium"
-      >
-        <a href="index.html" class="block nav-link">Home</a>
-        <a href="about.html" class="block nav-link">About</a>
-        <a href="admissions.html" class="block nav-link">Admissions</a>
-        <a href="contact.html" class="block nav-link">Contact</a>
-        <a
-          href="apply.html"
-          class="block bg-yellow-400 hover:bg-yellow-500 text-blue-800 font-bold py-2 px-4 rounded transition w-fit"
-          >Apply Now</a
-        >
-      </div>
-    </header>
-
     <!-- Contact Page Hero -->
     <section
       class="relative bg-fixed bg-cover bg-center -mt-20 pt-20 h-[60vh] text-white"
-      style="
-        background-image: url('assets/images/school_image.png');
-      "
+      style="background-image: url('assets/images/school_image.png')"
     >
+      <!-- Top Bar -->
+      <div
+        class="bg-gray-800 text-white text-sm py-2 px-4 hidden md:flex justify-between items-center"
+      >
+        <div>
+          <span class="mr-4"><i class="fas fa-phone"></i> +27 71 234 5678</span>
+          <span><i class="fas fa-envelope"></i> info@jjkhighschool.co.za</span>
+        </div>
+        <div>Mon - Fri: 07:30 - 15:30</div>
+      </div>
+
+      <!-- Navbar -->
+      <header class="bg-blue-600 text-white shadow-md relative z-50">
+        <div
+          class="container mx-auto flex items-center justify-between px-4 py-4"
+        >
+          <!-- Logo with two colors -->
+          <div class="text-2xl font-bold font-times">
+            <a href="index.html">
+              <span class="text-white">JJK</span
+              ><span class="text-yellow-300"> High School</span>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav
+            class="hidden md:flex space-x-6 text-lg font-semibold items-center"
+          >
+            <a
+              href="index.html"
+              class="nav-link pb-1 border-b-2 border-transparent hover:border-white transition"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="nav-link pb-1 border-b-2 border-transparent hover:border-white transition"
+              >About</a
+            >
+            <a
+              href="admissions.html"
+              class="nav-link pb-1 border-b-2 border-transparent hover:border-white transition"
+              >Admissions</a
+            >
+            <a
+              href="contact.html"
+              class="nav-link pb-1 border-b-2 border-transparent hover:border-white transition"
+              >Contact</a
+            >
+            <a
+              href="apply.html"
+              class="bg-yellow-400 hover:bg-yellow-500 text-blue-800 font-bold py-2 px-4 rounded transition"
+              >Apply Now</a
+            >
+          </nav>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="md:hidden text-white focus:outline-none"
+            id="menu-toggle"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden px-4 py-2 pb-4 space-y-3 bg-blue-700 text-white font-medium"
+        >
+          <a href="index.html" class="block px-6 py-4 text-lg font-semibold hover:bg-blue-100 transition">Home</a>
+          <a href="about.html" class="block px-6 py-4 text-lg font-semibold hover:bg-blue-100 transition">About</a>
+          <a href="admissions.html" class="block px-6 py-4 text-lg font-semibold hover:bg-blue-100 transition">Admissions</a>
+          <a href="contact.html" class="block px-6 py-4 text-lg font-semibold text-blue-500 bg-gray-100 rounded">Contact</a>
+          <a
+            href="apply.html"
+            class="block bg-yellow-400 hover:bg-yellow-500 text-blue-800 font-bold py-2 px-4 rounded transition w-fit"
+            >Apply Now</a
+          >
+        </div>
+      </header>
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
       <div
         class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4"
-        data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1200"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        data-aos-duration="1200"
       >
         <h1 class="text-4xl md:text-5xl font-bold mb-6 font-times">
-          Get in Touch with JJK High
-          School
+          Get in Touch with JJK High School
         </h1>
         <p class="text-xl md:text-2xl max-w-2xl mb-8">
           Whether you have a question, need assistance, or want to schedule a
@@ -170,13 +168,13 @@
             href="tel:+27000000000"
             class="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg rounded-lg font-semibold transition duration-300 flex items-center justify-center"
           >
-           Call Us
+            Call Us
           </a>
           <a
             href="#contact-form"
             class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white px-8 py-4 text-lg rounded-lg font-semibold transition duration-300 flex items-center justify-center"
           >
-          Send a Message
+            Send a Message
           </a>
         </div>
       </div>
@@ -188,7 +186,10 @@
         <div class="max-w-6xl mx-auto">
           <div class="grid md:grid-cols-3 gap-8">
             <!-- Address -->
-            <div class="bg-blue-50 p-8 rounded-xl text-center" data-aos="fade-up">
+            <div
+              class="bg-blue-50 p-8 rounded-xl text-center"
+              data-aos="fade-up"
+            >
               <div class="text-blue-600 text-4xl mb-4">🏫</div>
               <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
                 Visit Us
@@ -201,7 +202,10 @@
             </div>
 
             <!-- Contact -->
-            <div class="bg-blue-50 p-8 rounded-xl text-center" data-aos="fade-up">
+            <div
+              class="bg-blue-50 p-8 rounded-xl text-center"
+              data-aos="fade-up"
+            >
               <div class="text-blue-600 text-4xl mb-4">📱</div>
               <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
                 Contact Details
@@ -233,7 +237,10 @@
             </div>
 
             <!-- Hours -->
-            <div class="bg-blue-50 p-8 rounded-xl text-center" data-aos="fade-up">
+            <div
+              class="bg-blue-50 p-8 rounded-xl text-center"
+              data-aos="fade-up"
+            >
               <div class="text-blue-600 text-4xl mb-4">🕒</div>
               <h3 class="font-bold font-times text-xl text-gray-800 mb-4">
                 Office Hours
@@ -402,7 +409,7 @@
     <script>
       AOS.init({
         duration: 1000,
-        once: true
+        once: true,
       });
     </script>
   </body>
